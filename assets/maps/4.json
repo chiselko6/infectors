@@ -10,7 +10,7 @@
          "width":20,
          "x":0,
          "y":0
-        }, 
+        },
         {
          "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18, 18, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18, 0, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18, 0, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18, 0, 18, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18, 0, 0, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18, 0, 0, 18, 18, 18, 18, 18, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18, 18, 18, 0, 0, 0, 0, 0, 0, 0, 18, 0, 0, 0, 0, 0, 18, 18, 18, 18, 18, 0, 0, 0, 0, 0, 18, 18, 18, 18, 18, 0, 0, 0, 0, 0, 18, 0, 0, 0, 0, 0, 0, 0, 18, 18, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18, 18, 18, 18, 18, 18, 18, 18, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":15,
@@ -21,60 +21,7 @@
          "width":20,
          "x":0,
          "y":0
-        }, 
-        {
-         "height":15,
-         "name":"Changers",
-         "objects":[
-                {
-                 "gid":29,
-                 "height":0,
-                 "name":"Red",
-                 "properties":
-                    {
-                     "type":"red"
-                    },
-                 "type":"",
-                 "visible":true,
-                 "width":0,
-                 "x":320,
-                 "y":224
-                }, 
-                {
-                 "gid":30,
-                 "height":0,
-                 "name":"Blue",
-                 "properties":
-                    {
-                     "type":"blue"
-                    },
-                 "type":"",
-                 "visible":true,
-                 "width":0,
-                 "x":224,
-                 "y":320
-                }, 
-                {
-                 "gid":31,
-                 "height":0,
-                 "name":"Green",
-                 "properties":
-                    {
-                     "type":"green"
-                    },
-                 "type":"",
-                 "visible":true,
-                 "width":0,
-                 "x":352,
-                 "y":320
-                }],
-         "opacity":1,
-         "type":"objectgroup",
-         "visible":true,
-         "width":20,
-         "x":0,
-         "y":0
-        }, 
+        },
         {
          "height":15,
          "name":"Capsules",
@@ -92,7 +39,7 @@
                  "width":0,
                  "x":288,
                  "y":192
-                }, 
+                },
                 {
                  "gid":33,
                  "height":0,
@@ -106,7 +53,7 @@
                  "width":0,
                  "x":160,
                  "y":352
-                }, 
+                },
                 {
                  "gid":34,
                  "height":0,
@@ -127,7 +74,7 @@
          "width":20,
          "x":0,
          "y":0
-        }, 
+        },
         {
          "height":15,
          "name":"Viruses",
@@ -138,6 +85,7 @@
                  "name":"Red",
                  "properties":
                     {
+                     "description": "paper",
                      "type":"red"
                     },
                  "type":"",
@@ -145,13 +93,14 @@
                  "width":0,
                  "x":288,
                  "y":128
-                }, 
+                },
                 {
                  "gid":39,
                  "height":0,
                  "name":"Blue",
                  "properties":
                     {
+                     "description": "glass",
                      "type":"blue"
                     },
                  "type":"",
@@ -159,13 +108,14 @@
                  "width":0,
                  "x":96,
                  "y":352
-                }, 
+                },
                 {
                  "gid":40,
                  "height":0,
                  "name":"Green",
                  "properties":
                     {
+                     "description": "plastic",
                      "type":"green"
                     },
                  "type":"",
@@ -180,7 +130,7 @@
          "width":20,
          "x":0,
          "y":0
-        }, 
+        },
         {
          "height":15,
          "name":"Hero",
@@ -228,7 +178,7 @@
          "spacing":0,
          "tileheight":32,
          "tilewidth":32
-        }, 
+        },
         {
          "firstgid":17,
          "image":"..\/images\/walls.png",
@@ -243,7 +193,7 @@
          "spacing":0,
          "tileheight":32,
          "tilewidth":32
-        }, 
+        },
         {
          "firstgid":29,
          "image":"..\/images\/changers.png",
@@ -258,7 +208,7 @@
          "spacing":0,
          "tileheight":32,
          "tilewidth":32
-        }, 
+        },
         {
          "firstgid":32,
          "image":"..\/images\/capsules.png",
@@ -273,7 +223,7 @@
          "spacing":0,
          "tileheight":32,
          "tilewidth":32
-        }, 
+        },
         {
          "firstgid":38,
          "image":"..\/images\/viruses.png",
@@ -288,7 +238,7 @@
          "spacing":0,
          "tileheight":32,
          "tilewidth":32
-        }, 
+        },
         {
          "firstgid":50,
          "image":"..\/images\/character.png",

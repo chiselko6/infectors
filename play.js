@@ -14,6 +14,7 @@ var playState = {
     this.bgmPool = new AudioPool(['track1', 'track2', 'track3', 'track4', 'track5', 'track6']);
     game.sound.stopAll();
     this.bgmPool.randomPlay(true);
+    this.initialViruses = 0;
 
     game.global.moves = 0;
     game.global.time = 0;
@@ -41,6 +42,7 @@ var playState = {
     this.map.objects['Viruses'].forEach(function(e) {
       var y = e.y - self.map.tileHeight;
       var virus = new Virus(e.x, y, e.properties.type);
+      self.initialViruses++;
     });
 
     game.world.bringToTop(groups.walls);
@@ -71,13 +73,21 @@ var playState = {
     this.ingameMenu = new IngameMenu(this);
     this.hud = new HUD();
     this.tutorial = new Tutorial(this.player);
+
+    var current_y = 50;
+    this.map.objects['Viruses'].forEach(function(e) {
+      var y = e.y - self.map.tileHeight;
+      var virus = new Virus(0, current_y, e.properties.type);
+      game.add.bitmapText(25, current_y, uiFonts.TITLE, ' - ' + e.properties.description, 24);
+      current_y += 50;
+    });
   },
 
   update: function() {
     this.hud.update();
     this.tutorial.update();
     game.global.time += game.time.elapsed;
-    if (groups.viruses.length === 0) {
+    if (groups.viruses.length === this.initialViruses) {
       this.sceneDelay -= game.time.elapsed;
       if (this.sceneDelay <= 0) {
         if (game.global.level === game.global.totalLevels) {

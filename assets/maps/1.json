@@ -71,6 +71,7 @@
                  "name":"Red",
                  "properties":
                     {
+                     "description":"paper",
                      "type":"red"
                     },
                  "type":"",
@@ -85,6 +86,7 @@
                  "name":"Green",
                  "properties":
                     {
+                     "description": "plastic",
                      "type":"green"
                     },
                  "type":"",
