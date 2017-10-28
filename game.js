@@ -1,6 +1,6 @@
 'use strict';
 
-var game = new Phaser.Game(640, 480, Phaser.AUTO, 'game');
+var game = new Phaser.Game('100%', 720, Phaser.AUTO, 'game');
 game.global = {
   level: 1,
   moves: 0,
