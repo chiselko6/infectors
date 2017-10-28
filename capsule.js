@@ -7,14 +7,19 @@ var Capsule = function(x, y, type, map) {
   this.variant = type;
   this.moving = false;
   this.blocked = false;
+  var finalVariant = 3;
   if (type === colorVariant.RED) {
     this.frame = 0;
+    finalVariant = 3;
   } else if (type === colorVariant.BLUE) {
     this.frame = 1;
+    finalVariant = 4;
   } else if (type === colorVariant.GREEN) {
     this.frame = 2;
+    finalVariant = 5;
   }
-  this.animations.add('capture', [3, 4, 3, 4, 3, 4, 5], 20, false);
+
+  this.animations.add('capture', [3, 4, 5, 3, 4, 5, finalVariant], 20, false);
   this.captureSound = this.game.add.audio('capture');
   groups.capsules.add(this);
 };
