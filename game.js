@@ -15,6 +15,7 @@ game.state.add('load', loadState);
 game.state.add('menu', menuState);
 game.state.add('intro', introState);
 game.state.add('play', playState);
+game.state.add('stageInfo', stageInfo);
 game.state.add('summary', summaryState);
 game.state.add('win', winState);
 

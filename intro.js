@@ -13,6 +13,6 @@ var introState = {
   },
 
   start: function() {
-    game.state.start('play');
+    game.state.start('stageInfo');
   }
 };
