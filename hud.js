@@ -10,7 +10,7 @@ var HUD = function() {
   game.add.bitmapText(230, y, uiFonts.HUD, 'Moves: ', textSize);
   this.movesLabel = game.add.bitmapText(340, y, uiFonts.HUD, game.global.moves.toString(), textSize);
   game.add.bitmapText(515, y, uiFonts.HUD, 'x', textSize);
-  this.virusesLabel = game.add.bitmapText(550, y, uiFonts.HUD, groups.viruses.length.toString(), textSize);
+  this.virusesLabel = game.add.bitmapText(550, y, uiFonts.HUD, (groups.viruses.length / 2).toString(), textSize);
 
   groups.hud.add(this);
 };
@@ -20,5 +20,5 @@ HUD.prototype.constructor = HUD;
 
 HUD.prototype.update = function() {
   this.movesLabel.setText(game.global.moves.toString());
-  this.virusesLabel.setText(groups.viruses.length.toString());
+  this.virusesLabel.setText((groups.viruses.length / 2).toString());
 };
