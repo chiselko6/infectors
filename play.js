@@ -20,12 +20,10 @@ var playState = {
 
     groups.viruses = game.add.group();
     groups.capsules = game.add.group();
-    groups.changers = game.add.group();
     groups.hud = game.add.group();
 
     groups.viruses.enableBody = true;
     groups.capsules.enableBody = true;
-    groups.changers.enableBody = true;
 
     this.map = game.add.tilemap(game.global.level.toString());
     this.map.addTilesetImage('walls', 'walls');
@@ -40,11 +38,6 @@ var playState = {
       var cap = new Capsule(e.x, y, e.properties.type, self.map);
     });
 
-    this.map.objects['Changers'].forEach(function(e) {
-      var y = e.y - self.map.tileHeight;
-      var chg = new Changer(e.x, y, e.properties.type);
-    });
-
     this.map.objects['Viruses'].forEach(function(e) {
       var y = e.y - self.map.tileHeight;
       var virus = new Virus(e.x, y, e.properties.type);
@@ -53,7 +46,6 @@ var playState = {
     game.world.bringToTop(groups.walls);
     game.world.bringToTop(groups.capsules);
     game.world.bringToTop(groups.viruses);
-    game.world.bringToTop(groups.changers);
 
     var e = this.map.objects['Hero'][0];
     var y = e.y - this.map.tileHeight;

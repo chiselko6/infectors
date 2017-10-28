@@ -32,14 +32,9 @@ var Hero = function(x, y, variant, facing, map) {
 Hero.prototype = Object.create(Phaser.Sprite.prototype);
 Hero.prototype.constructor = Hero;
 
-Hero.prototype.changeColor = function(newColor) {
-  this.variant = newColor;
-};
-
 Hero.prototype.update = function() {
   if (!this.walking) {
     this.checkMovement();
-    this.checkChanger();
   }
 };
 
@@ -59,7 +54,7 @@ Hero.prototype.move = function(xDir, yDir) {
   // TODO: Change the frame but do not move
   if (this.isWalkable(newX, newY)) {
     var capsule = findCapsule(newX, newY);
-    if ((capsule === null) || (capsule.variant === this.variant && capsule.move(this.direction))) {
+    if ((capsule === null) || (capsule.move(this.direction))) {
       this.walking = true;
       this.walkingSound.play();
       this.animations.play(this.getAnimName());
@@ -107,18 +102,5 @@ Hero.prototype.checkMovement = function() {
     this.move(null, yDir);
   } else if (xDir !== 0) {
     this.move(xDir, null);
-  }
-};
-
-Hero.prototype.checkChanger = function() {
-  var self = this;
-  var chg = findChanger(this.x, this.y);
-
-  if (chg !== null && chg.variant !== this.variant) {
-    var transf = new Transformation(this.x, this.y);
-    this.changerSound.play();
-    this.variant = chg.variant;
-    this.animations.stop();
-    this.animations.getAnimation(this.getAnimName()).frame = 0;
   }
 };

@@ -1,11 +1,11 @@
 {
-  "name": "Infectors",
+  "name": "Trashmen",
   "main": "index.html",
   "version": "1.0.0",
-  "author": "Wil Alvarez",
+  "author": "Green World",
   "nodejs": true,
   "window": {
-    "title": "Infectors",
+    "title": "Trashmen",
     "width": 640,
     "min_width": 640,
     "max_width": 640,

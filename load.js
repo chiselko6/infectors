@@ -24,7 +24,6 @@ var loadState = {
     game.load.spritesheet('hero', 'assets/images/character.png', 32, 32);
     game.load.spritesheet('capsules', 'assets/images/capsules.png', 32, 32);
     game.load.spritesheet('viruses', 'assets/images/viruses.png', 32, 32);
-    game.load.spritesheet('changers', 'assets/images/changers.png', 32, 32);
     game.load.spritesheet('transformation', 'assets/images/transformation.png', 32, 32);
 
     // SFX
