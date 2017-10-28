@@ -45,7 +45,7 @@ var menuState = {
   start: function() {
     if (this.enableLevelSelection()) {
       game.global.level = this.level;
-      game.state.start('play');
+      game.state.start('stageInfo');
     } else {
       game.state.start('intro');
     }
