@@ -12,6 +12,9 @@ var loadState = {
     game.load.bitmapFont('record', 'assets/fonts/record.png', 'assets/fonts/record.fnt');
 
     game.load.image('title', 'assets/images/title.png');
+    for (var i = 1; i <= game.global.totalLevels; i++) {
+      game.load.image('level-' + i.toString(), 'assets/images/level-' + i.toString() + '.png');
+    }
     game.load.image('walls', 'assets/images/walls.png');
     game.load.image('grounds', 'assets/images/grounds.png');
     game.load.image('summary', 'assets/images/summary.png');
@@ -44,6 +47,11 @@ var loadState = {
     game.load.audio('track4', 'assets/sounds/track4.mp3', 0.75, true);
     game.load.audio('track5', 'assets/sounds/track5.mp3', 0.75, true);
     game.load.audio('track6', 'assets/sounds/track6.mp3', 0.75, true);
+
+    // stages info
+    for (var i = 1; i <= game.global.totalLevels; i++) {
+      game.load.text('stage-' + i.toString(), 'assets/stages/' + i.toString() + '.txt')
+    }
 
     for (var i=1; i<=game.global.totalLevels; i++) {
       game.load.tilemap(i.toString(), 'assets/maps/' + i.toString() + '.json', null, Phaser.Tilemap.TILED_JSON);

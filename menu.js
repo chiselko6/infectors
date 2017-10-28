@@ -11,10 +11,10 @@ var menuState = {
     this.currentLevel = parseInt(storage.read('level.current'));
     if (this.enableLevelSelection()) {
       this.level = this.currentLevel;
-      this.selectLabel = game.add.bitmapText(190, 300, uiFonts.TITLE, 'Select level', 30);
-      this.arrowLeft = game.add.sprite(375, 310, 'arrowleft');
-      this.arrowRight = game.add.sprite(455, 310, 'arrowright');
-      this.levelLabel = game.add.bitmapText(408, 305, uiFonts.TITLE, '00', 30);
+      this.selectLabel = game.add.bitmapText(190, 330, uiFonts.TITLE, 'Select level', 30);
+      this.arrowLeft = game.add.sprite(375, 335, 'arrowleft');
+      this.arrowRight = game.add.sprite(455, 335, 'arrowright');
+      this.levelLabel = game.add.bitmapText(408, 330, uiFonts.TITLE, '00', 30);
 
       var moveLeft = game.input.keyboard.addKey(Phaser.Keyboard.LEFT);
       var moveRight = game.input.keyboard.addKey(Phaser.Keyboard.RIGHT);
@@ -54,6 +54,7 @@ var menuState = {
   update: function() {
     if (this.enableLevelSelection()) {
       var level = this.level.toString();
+      game.add.image(0, 0, 'level-' + level);
       this.levelLabel.setText(level);
       if (this.level === this.currentLevel) {
         this.arrowLeft.revive();
