@@ -47,6 +47,6 @@ var summaryState = {
   },
 
   next: function() {
-    game.state.start('play');
+    game.state.start('stageInfo');
   }
 };
