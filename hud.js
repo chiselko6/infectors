@@ -8,7 +8,7 @@ var HUD = function() {
   this.fixedToCamera = true;
   this.levelLabel = game.add.bitmapText(35, y, uiFonts.HUD, 'Level: ' + game.global.level.toString(), textSize);
   game.add.bitmapText(465, y, uiFonts.HUD, 'Moves: ', textSize);
-  this.movesLabel = game.add.bitmapText(340, y, uiFonts.HUD, game.global.moves.toString(), textSize);
+  this.movesLabel = game.add.bitmapText(570, y, uiFonts.HUD, game.global.moves.toString(), textSize);
 
   groups.hud.add(this);
 };
