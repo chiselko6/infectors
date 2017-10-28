@@ -29,10 +29,10 @@
                 {
                  "gid":32,
                  "height":0,
-                 "name":"Red",
+                 "name":"Green",
                  "properties":
                     {
-                     "type":"red"
+                     "type":"green"
                     },
                  "type":"",
                  "visible":true,
@@ -68,11 +68,11 @@
                 {
                  "gid":38,
                  "height":0,
-                 "name":"Red",
+                 "name":"Green",
                  "properties":
                     {
-                     "description": "paper",
-                     "type":"red"
+                     "description": "plastic",
+                     "type":"green"
                     },
                  "type":"",
                  "visible":true,
