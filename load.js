@@ -62,8 +62,8 @@ var loadState = {
     }
 
     for (var i=1; i<=game.global.totalLevels; i++) {
-      var levelToLoad = (i===1)? 1: i+3;
-      // var levelToLoad = i;
+      // var levelToLoad = (i===1)? 1: i+3;
+      var levelToLoad = i;
       game.load.tilemap(i.toString(), 'assets/maps/' + (levelToLoad).toString() + '.json', null, Phaser.Tilemap.TILED_JSON);
     }
   },

@@ -5,7 +5,7 @@ game.global = {
   level: 1,
   moves: 0,
   time: 0,
-  totalLevels: 1,
+  totalLevels: 5,
     is_lost: false,
     maxTurnsLevel: [15, 30, 35, 30, 35]
 };
