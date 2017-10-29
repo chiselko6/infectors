@@ -13,9 +13,5 @@ var stageInfo = {
 
   start: function() {
     game.state.start('play');
-  },
-
-  enableLevelSelection: function() {
-    return this.currentLevel !== null && this.currentLevel > 1;
   }
 }

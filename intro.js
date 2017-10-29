@@ -2,17 +2,45 @@
 
 var introState = {
   create: function() {
-    bitmapTextCentered(150, uiFonts.TITLE, 'Planet earth has been infected for hundred of', 26);
-    bitmapTextCentered(180, uiFonts.TITLE, 'viruses. To save the world you must capture', 26);
-    bitmapTextCentered(210, uiFonts.TITLE, 'them using cryogenic capsules.', 26);
-    bitmapTextCentered(250, uiFonts.TITLE, 'Future of humanity is in your hands...', 26);
-    bitmapTextCentered(450, uiFonts.TITLE, 'Press ENTER to continue', 18);
-
-    var enterKey = game.input.keyboard.addKey(Phaser.Keyboard.ENTER);
-    enterKey.onDown.addOnce(this.start, this);
+    this.printText('Governments of all countries turned a blind eye on environmental problems last 100 years. Eventually planet became so contaminated with garbage that there was no clean place without any rubbish. Some places even became unsuitable to live due to garbage toxic emissions. In order to prevent expansion of those zones and appearing new ones, the governments all over the planet had to take drastic measures. They made separate waste collection obligatory and created special squads' + 'of the guardians of nature whose goal would be to clean up the risk territories. ' +
+    'It is the necessary first step because recycling of mixed rubbish is unprofitable, but if garbage is separated into different elements, its recycling will even make money for fighting environmental problems.');
+    setTimeout(function() {
+      bitmapTextCentered(450, uiFonts.TITLE, 'Press ENTER to continue', 18);
+    }, 8800);
   },
 
   start: function() {
     game.state.start('stageInfo');
+  },
+
+  printText: function(text) {
+    var i = 0;
+    var x = 0, y = 0;
+    var WIDTH = 620, CHAR_LEN = 12;
+    var self = this;
+
+    function runPrint() {
+      setTimeout(function() {
+        var label = self.printChar(x, y, text[i]);
+        i++;
+        if (x + label.textWidth + CHAR_LEN > WIDTH) {
+          x = 0;
+          y += 29;
+        } else {
+          x += label.textWidth + 3;
+        }
+        if (i < text.length) {
+          runPrint();
+        } else {
+          var enterKey = game.input.keyboard.addKey(Phaser.Keyboard.ENTER);
+          enterKey.onDown.addOnce(self.start, self);
+        }
+      }, 10);
+    }
+    runPrint();
+  },
+
+  printChar: function(x, y, char) {
+    return game.add.bitmapText(x, y, uiFonts.TITLE, char, 20);
   }
 };
