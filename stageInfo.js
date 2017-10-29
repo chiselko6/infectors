@@ -7,7 +7,7 @@ var stageInfo = {
     this.level = game.global.level;
     game.add.image(0, 0, 'level-' + this.level.toString());
     var levelDescription = game.cache.getText('stage-' + this.level);
-    bitmapTextCentered(330, uiFonts.TITLE, levelDescription)
+    bitmapTextCentered(330, uiFonts.TITLE, levelDescription, 20)
     setTimeout(this.start, LEVEL_DESCRIPTION_DELAY);
   },
 

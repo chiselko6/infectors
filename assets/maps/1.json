@@ -27,20 +27,6 @@
          "name":"Capsules",
          "objects":[
                 {
-                 "gid":32,
-                 "height":0,
-                 "name":"Red",
-                 "properties":
-                    {
-                     "type":"red"
-                    },
-                 "type":"",
-                 "visible":true,
-                 "width":0,
-                 "x":320,
-                 "y":320
-                },
-                {
                  "gid":34,
                  "height":0,
                  "name":"Green",
@@ -65,21 +51,6 @@
          "height":15,
          "name":"Viruses",
          "objects":[
-                {
-                 "gid":38,
-                 "height":0,
-                 "name":"Red",
-                 "properties":
-                    {
-                     "description":"paper",
-                     "type":"red"
-                    },
-                 "type":"",
-                 "visible":true,
-                 "width":0,
-                 "x":416,
-                 "y":320
-                },
                 {
                  "gid":40,
                  "height":0,
