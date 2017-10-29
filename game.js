@@ -5,8 +5,11 @@ game.global = {
   level: 1,
   moves: 0,
   time: 0,
-  totalLevels: 5
-}
+  totalLevels: 1,
+    is_lost: false,
+    maxTurnsLevel: [15, 30, 35, 30, 35]
+};
+
 var debug = false;
 var groups = {};
 

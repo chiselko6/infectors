@@ -4,7 +4,7 @@ var menuState = {
   create: function() {
     game.sound.stopAll();
     game.add.image(0, 0, 'title');
-    bitmapTextCentered(450, uiFonts.TITLE, 'Press ENTER to start', 18);
+    // bitmapTextCentered(450, uiFonts.TITLE, 'Press ENTER to start', 18);
 
     var storage = new Storage();
 

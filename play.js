@@ -81,6 +81,13 @@ var playState = {
       game.add.bitmapText(25, current_y, uiFonts.TITLE, ' - ' + e.properties.description, 24);
       current_y += 50;
     });
+
+    bitmapTextCentered(
+        40,
+        'engeexpa',
+        'You have ' + game.global.maxTurnsLevel[game.global.level - 1].toString() + " moves.",
+        20
+    );
   },
 
   update: function() {
@@ -93,8 +100,14 @@ var playState = {
         if (game.global.level === game.global.totalLevels) {
           game.state.start('win');
         } else {
+          game.global.is_lost = false;
           game.state.start('summary');
         }
+      }
+    } else {
+      if (game.global.moves > game.global.maxTurnsLevel[game.global.level - 1]) {
+        game.global.is_lost = true;
+        game.state.start('summary');
       }
     }
   },
